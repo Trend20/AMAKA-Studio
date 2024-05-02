@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import {FaUser} from "react-icons/fa6";
 
 const DropdownUser = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -36,7 +36,7 @@ const DropdownUser = () => {
     });
 
     return (
-        <div className="relative">
+        <div className="relative flex items-center">
             <Link
                 ref={trigger}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -44,12 +44,7 @@ const DropdownUser = () => {
                 href="#"
             >
         <span className="h-12 w-12 rounded-full">
-          <Image
-              width={112}
-              height={112}
-              src={"/images/user/user-01.png"}
-              alt="User"
-          />
+            <FaUser />
         </span>
 
                 <svg
