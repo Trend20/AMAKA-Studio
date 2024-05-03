@@ -101,10 +101,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <li>
                                 <Link
                                     href="/home"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("home") && "bg-[#b8c0ff] dark:bg-meta-4" 
                                     }`}
                                 >
+
                                     <svg
                                         className="fill-current"
                                         width="18"
@@ -138,10 +139,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             {/* <!-- Menu Item Users --> */}
                             <li>
                                 <Link
-                                    href="/users"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("calendar") &&
-                                        "bg-graydark dark:bg-meta-4"
+                                    href="/events"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("events") &&
+                                        "bg-[#b8c0ff]"
                                     }`}
                                 >
                                     <svg
@@ -165,9 +166,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             {/* <!-- Menu Item Institutions --> */}
                             <li>
                                 <Link
-                                    href="/institutions"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("profile") && "bg-graydark dark:bg-meta-4"
+                                    href="/gigs"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("gigs") && "bg-[#b8c0ff]"
                                     }`}
                                 >
                                     <svg
@@ -195,9 +196,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             {/* <!-- Menu Item Streams --> */}
                             <li>
                                 <Link
-                                    href="/streams"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
+                                    href="/challenges"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("challenges") && "bg-[#b8c0ff]"
                                     }`}
                                 >
                                     <svg
@@ -233,9 +234,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             {/* <!-- Menu Item Classes --> */}
                             <li>
                                 <Link
-                                    href="/classes"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
+                                    href="/bookmarked"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("bookmarked") && "bg-[#b8c0ff]"
                                     }`}
                                 >
                                     <svg
@@ -271,9 +272,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             {/* <!-- Menu Item students --> */}
                             <li>
                                 <Link
-                                    href="/students"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
+                                    href="/notifications"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("notifications") && "bg-[#b8c0ff]"
                                     }`}
                                 >
                                     <svg
@@ -309,9 +310,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             {/* <!-- Menu Item Bulk SMS --> */}
                             <li>
                                 <Link
-                                    href="/bulkSMS"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
+                                    href="/messages"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("messages") && "bg-[#b8c0ff]"
                                     }`}
                                 >
                                     <svg
@@ -347,10 +348,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             {/* <!-- Menu Item Settings --> */}
                             <li>
                                 <Link
-                                    href="/settings"
-                                    className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-light duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                        pathname.includes("settings") &&
-                                        "bg-graydark dark:bg-meta-4"
+                                    href="/profile"
+                                    className={`group relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                        pathname.includes("profile") &&
+                                        "bg-[#b8c0ff]"
                                     }`}
                                 >
                                     <svg
