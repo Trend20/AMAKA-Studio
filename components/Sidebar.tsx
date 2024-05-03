@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MdTextsms } from "react-icons/md";
 import Image from "next/image";
+import HowAmakaWorks from "@/components/HowAmakaWorks";
 
 interface SidebarProps {
     sidebarOpen: boolean;
@@ -59,19 +60,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
     return (
         <aside
             ref={sidebar}
-            className={`absolute left-0 top-50 z-9999 flex h-screen border-r border-b-grey  w-72.5 flex-col overflow-y-hidden duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+            className={`absolute left-0 top-0 mt-20 z-9999 flex h-screen border-r border-b-grey  w-72.5 flex-col overflow-y-hidden duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
                 sidebarOpen ? "translate-x-0" : "-translate-x-full"
             }`}
         >
             {/* <!-- SIDEBAR HEADER --> */}
             <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-                <Link
-                    href="/"
-                    className="flex items-center justify-center ml-5"
-                >
-                    <Image src="/logo.png" alt={'logo'} width={70} height={70} />
-                </Link>
-
                 <button
                     ref={trigger}
                     onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -99,7 +93,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
             <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
                 {/* <!-- Sidebar Menu --> */}
-                <nav className="mt-5 py-4 px-4 lg:mt-9 lg:px-6">
+                <nav className="px-4 lg:px-6">
                     {/* <!-- Menu Group --> */}
                     <div>
                         <ul className="mb-6 flex flex-col gap-1.5">

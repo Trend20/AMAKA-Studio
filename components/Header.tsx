@@ -4,14 +4,25 @@ import DarkModeSwitcher from "./DarkModeSwitcher";
 import DropdownUser from "./DropdownUser";
 import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
+import HowAmakaWorks from "@/components/HowAmakaWorks";
+import React from "react";
 
 const Header = (props: {
     sidebarOpen: string | boolean | undefined;
     setSidebarOpen: (arg0: boolean) => void;
 }) => {
     return (
-        <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
+        <header className="sticky top-0 z-999 flex w-full drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
             <div className="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11">
+                <div className="flex items-center space-x-3 w-full">
+                    <Link
+                        href="/"
+                        className="flex items-center justify-center"
+                    >
+                        <Image src="/logo.png" alt={'logo'} width={70} height={70}/>
+                    </Link>
+                    <HowAmakaWorks/>
+                </div>
                 <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
                     {/* <!-- Hamburger Toggle BTN --> */}
                     <button
@@ -22,7 +33,7 @@ const Header = (props: {
                         }}
                         className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
                     >
-                    <RxHamburgerMenu />
+                        <RxHamburgerMenu/>
                     </button>
                     {/* <!-- Hamburger Toggle BTN --> */}
 
@@ -36,7 +47,7 @@ const Header = (props: {
                     </Link>
                 </div>
 
-                <div className="flex items-center space-x-5">
+                <div className="flex items-center space-x-5 w-full justify-end">
                     <div className="hidden sm:block">
                         <form className="bg-bodydark1 space-x-5 w-52 flex items-center rounded-full p-3 px-4">
                             <button className="flex">
