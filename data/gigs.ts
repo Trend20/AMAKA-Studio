@@ -1,0 +1,42 @@
+export const gigsData = [
+    {
+        id:1,
+        profilePic:'/images/alicia.png',
+        name:'Alicia Davis',
+        title:'Content Maker',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt velit sit amet lacus tristique, non venenatis justo fermentum. Proin dictum, enim sed ullamcorper porta, odio eros tincidunt eros, eu ultrices nulla velit nec nulla.',
+        location:'London, United Kingdom',
+        hourlyRate:'$36 - $200',
+        timestamp:'1 hour',
+    },
+    {
+        id:2,
+        profilePic:'/images/alicia.png',
+        name:'Alicia Davis',
+        title:'Content Maker',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt velit sit amet lacus tristique, non venenatis justo fermentum. Proin dictum, enim sed ullamcorper porta, odio eros tincidunt eros, eu ultrices nulla velit nec nulla.',
+        location:'London, United Kingdom',
+        hourlyRate:'$78 - $400',
+        timestamp:'4 hours',
+    },
+    {
+        id:3,
+        profilePic:'/images/alicia.png',
+        name:'Alicia Davis',
+        title:'Content Maker',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt velit sit amet lacus tristique, non venenatis justo fermentum. Proin dictum, enim sed ullamcorper porta, odio eros tincidunt eros, eu ultrices nulla velit nec nulla.',
+        location:'London, United Kingdom',
+        hourlyRate:'$100 - $500',
+        timestamp:'6 hours',
+    },
+    {
+        id:4,
+        profilePic:'/images/alicia.png',
+        name:'Alicia Davis',
+        title:'Content Maker',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt velit sit amet lacus tristique, non venenatis justo fermentum. Proin dictum, enim sed ullamcorper porta, odio eros tincidunt eros, eu ultrices nulla velit nec nulla.',
+        location:'London, United Kingdom',
+        hourlyRate:'$60 - $290',
+        timestamp:'2 hours',
+    }
+]
