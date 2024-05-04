@@ -5,6 +5,7 @@ import SingleGig from "@/app/gigs/components/SingleGig";
 import GigDetails from "@/app/gigs/components/GigDetails";
 import Skills from "@/components/Skills";
 import AboutCreator from "@/app/gigs/components/AboutCreator";
+import GigHistory from "@/app/gigs/components/GigHistory";
 
 const GigsPage = () => {
     const defaultGig= gigsData[0];
@@ -29,6 +30,7 @@ const GigsPage = () => {
                    <div className="flex flex-col border border-stroke py-3 rounded-xl">
                        <AboutCreator gig={selectedGig} />
                        <Skills />
+                       <GigHistory />
                    </div>
                 </div>
             </div>
