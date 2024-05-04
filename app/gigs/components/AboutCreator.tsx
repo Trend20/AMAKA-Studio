@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutCreator = ({gig}:any) => {
     return(
-        <div className="flex flex-col w-full px-4">
+        <div className="flex flex-col w-full px-4 border-b py-5 border-stroke">
             <p className="flex text-lg font-semibold">About the creator</p>
             <div className="flex justify-between w-full mt-5">
                 <div className="flex space-x-3 items-center">

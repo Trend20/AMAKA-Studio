@@ -29,8 +29,8 @@ const GigsPage = () => {
                     <GigDetails gig={selectedGig}/>
                    <div className="flex flex-col border border-stroke py-3 rounded-xl">
                        <AboutCreator gig={selectedGig} />
-                       <Skills />
                        <GigHistory />
+                       <Skills />
                    </div>
                 </div>
             </div>
