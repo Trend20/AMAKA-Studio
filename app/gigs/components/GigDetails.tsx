@@ -45,7 +45,7 @@ const GigDetails = ({gig}:any) =>{
                     </button>
                 </div>
                 <div className="flex flex-col w-full mt-8">
-                    <p className="flex text-lg">Brief</p>
+                    <p className="flex text-lg font-semibold">Brief</p>
                     <p className="text-sm leading-5">
                         {gig.overview}
                     </p>
