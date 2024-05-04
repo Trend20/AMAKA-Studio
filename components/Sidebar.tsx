@@ -97,9 +97,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         <ul className="mb-6 flex flex-col gap-1.5">
                             {
                                 sidebarData.map((item) => (
-                                    <li>
+                                    <li  key={item.id}>
                                         <Link
-                                            key={item.id}
                                             href={`/${item.name}`}
                                             className={`group relative capitalize space-x-5 flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
                                                 pathname.includes(`${item.name}`) && "bg-[#b8c0ff] dark:bg-meta-4"
