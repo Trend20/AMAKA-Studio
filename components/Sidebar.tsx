@@ -99,6 +99,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                 sidebarData.map((item) => (
                                     <li>
                                         <Link
+                                            key={item.id}
                                             href={`/${item.name}`}
                                             className={`group relative capitalize space-x-5 flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
                                                 pathname.includes(`${item.name}`) && "bg-[#b8c0ff] dark:bg-meta-4"
