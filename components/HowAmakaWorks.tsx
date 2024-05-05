@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GoLinkExternal } from "react-icons/go";
+import {FC} from "react";
 
 const HowAmakaWorks = () =>{
     return(

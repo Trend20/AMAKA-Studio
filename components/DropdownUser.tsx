@@ -4,7 +4,7 @@ import Link from "next/link";
 import {FaUser} from "react-icons/fa6";
 
 const DropdownUser = () => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
     const trigger = useRef<any>(null);
     const dropdown = useRef<any>(null);
 

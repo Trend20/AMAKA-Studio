@@ -1,9 +1,8 @@
 import {skills} from "@/data/skills";
 import Link from "next/link";
-import React, {FC} from "react";
 import {Skill} from "@/types/skill";
 
-const Skills:FC = () => {
+const Skills = () => {
     return(
         <div className="flex flex-col w-full px-4 mt-5  border-t py-5 border-stroke">
             <p className="flex text-lg font-semibold">Skills</p>

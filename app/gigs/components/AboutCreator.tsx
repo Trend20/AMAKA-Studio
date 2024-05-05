@@ -20,10 +20,7 @@ const AboutCreator = ({gig}:any) => {
             <div className="flex flex-col">
                 <p className="text-sm leading-10 font-light text-bodydark2">@rosannaspansino . 19,7k subscribers . 28 posts</p>
                 <p className="text-sm leading-5 mt-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt velit sit amet
-                    lacus tristique, non venenatis justo fermentum. Proin dictum, enim sed ullamcorper porta,
-                    odio eros tincidunt eros, eu ultrices nulla velit nec nulla. Etiam ut dui magna. Sed vel ultricies
-                    nunc. In hac habitasse platea dictumst. Integer commodo est.... <b>Read More</b>
+                    {gig.overview}.... <b>Read More</b>
                 </p>
             </div>
         </div>
