@@ -4,9 +4,10 @@ import Image from "next/image";
 import React from "react";
 import { GrClose } from "react-icons/gr";
 
-const SingleGig = ({gig, handleClick}:any) =>{
+const SingleGig = ({gig, handleClick, selectedItem}:any) =>{
+    console.log(selectedItem);
     return(
-        <div className="flex flex-col px-3 relative cursor-pointer" onClick={handleClick}>
+        <div className={`flex flex-col px-3 relative cursor-pointer ${selectedItem === gig ? 'bg-[#f8f9fa]' : 'bg-transparent'}`} onClick={handleClick}>
             <div className="flex items-start space-x-5 py-2">
                 <Image src={gig.profilePic} alt={gig.name} width={170} height={170} className="rounded-full"/>
                 <div className="flex flex-col">
@@ -18,7 +19,7 @@ const SingleGig = ({gig, handleClick}:any) =>{
                 </div>
             </div>
             <button className="flex absolute right-5 top-2">
-                <GrClose size={25} fill="#64748B" />
+                <GrClose size={20} color="#64748B" />
             </button>
             <hr className="border-t border-stroke w-full"/>
         </div>
