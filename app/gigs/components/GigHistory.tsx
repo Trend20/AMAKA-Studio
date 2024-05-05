@@ -6,7 +6,7 @@ import Image from "next/image";
 const GigHistory = () =>{
     return(
         <div className="flex flex-col px-4 w-full mt-5">
-            <p className="flex text-lg font-semibold py-3">Gig history({gigHistory.length})</p>
+            <p className="flex text-lg font-semibold py-3">Gig history ({gigHistory.length})</p>
             <div className="flex flex-col border-t border-stroke">
                 {
                     gigHistory.map((item, index) => (
