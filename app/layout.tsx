@@ -25,21 +25,20 @@ export default function RootLayout({
               <Loader/>
           ) : (
               <div className="flex h-screen overflow-hidden w-full">
-                  {/* <!-- ===== Sidebar Start ===== --> */}
+                  {/* <!-- ===== sidebar ===== --> */}
                       <Sidebar
                           sidebarOpen={sidebarOpen}
                           setSidebarOpen={setSidebarOpen}
                       />
-                  {/* <!-- ===== Sidebar End ===== --> */}
+                  {/* <!-- =====end  sidebar ===== --> */}
 
-                  {/* <!-- ===== Content Area Start ===== --> */}
                   <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-                      {/* <!-- ===== Header Start ===== --> */}
+                      {/* <!-- ===== header ===== --> */}
                           <Header
                               sidebarOpen={sidebarOpen}
                               setSidebarOpen={setSidebarOpen}
                           />
-                      {/* <!-- ===== Header End ===== --> */}
+                      {/* <!-- ===== end header ===== --> */}
 
                       {/* <!-- ===== Main Content Start ===== --> */}
                       <main className="lg:ml-70 min-h-screen">
@@ -49,7 +48,6 @@ export default function RootLayout({
                       </main>
                       {/* <!-- ===== Main Content End ===== --> */}
                   </div>
-                  {/* <!-- ===== Content Area End ===== --> */}
               </div>
           )}
       </div>
