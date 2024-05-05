@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import {sidebarData} from "@/data/sidebar";
+import {SidebarData} from "@/types/sidebar_data";
 
 interface SidebarProps {
     sidebarOpen: boolean;
@@ -13,7 +14,6 @@ interface SidebarProps {
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
     const pathname = usePathname();
-
     const trigger = useRef<any>(null);
     const sidebar = useRef<any>(null);
 
@@ -97,7 +97,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <div>
                         <ul className="mb-6 flex flex-col gap-1.5">
                             {
-                                sidebarData.map((item) => (
+                                sidebarData.map((item:SidebarData) => (
                                     <li  key={item.id}>
                                         <Link
                                             href={`/${item.name}`}

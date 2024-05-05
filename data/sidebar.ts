@@ -1,4 +1,6 @@
-export const sidebarData = [
+import {SidebarData} from "@/types/sidebar_data";
+
+export const sidebarData:SidebarData[] = [
     {
         id:1,
         name:'home',
