@@ -42,7 +42,7 @@ export default function RootLayout({
                       {/* <!-- ===== Header End ===== --> */}
 
                       {/* <!-- ===== Main Content Start ===== --> */}
-                      <main className="ml-70">
+                      <main className="lg:ml-70 min-h-screen">
                           <div className="mx-auto max-w-screen-2xl">
                               {children}
                           </div>

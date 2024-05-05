@@ -18,12 +18,12 @@ const GigHistory = () =>{
                                 <p className="text-xs font-light">4.50 | Canada</p>
                             </span>
                             <p className="font-light text-sm leading-5 mt-5 w-full">{item.description}</p>
-                            <div className="grid grid-cols-4 gap-5 mt-5">
+                            <div className="grid lg:grid-cols-4 grid-cols-2 gap-5 mt-5 w-full">
                                 {
                                     item.gallery.map((item, index) => (
                                         <div className="flex flex-col items-start" key={index}>
                                             <Image src={item.coverImg} alt="cover" width={200} height={200} className=""/>
-                                            <p>{item.overview}</p>
+                                            <p className="text-sm">{item.overview}</p>
                                         </div>
                                     ))
                                 }

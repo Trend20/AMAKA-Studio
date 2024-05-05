@@ -23,17 +23,17 @@ const GigsPage = () => {
     return(
         <div className="flex flex-col w-full">
             <GigFilters />
-            <div className="flex w-full px-4">
-                <div className="flex flex-col w-1/2 border-r border-stroke py-2 rounded-b-xl">
+            <div className="flex w-full px-3 flex-col lg:flex-row">
+                <div className="flex flex-col lg:w-1/2 w-full lg:border-r border-stroke py-2 rounded-b-xl">
                     {
                         gigsData.map((item) => (
                             <SingleGig gig={item} key={item.id} selectedItem={selectedGig} handleClick={() => handleSelectGig(item)}/>
                         ))
                     }
                 </div>
-                <div className="flex w-3/4 flex-col">
+                <div className="lg:flex lg:w-3/4 w-full flex-col">
                     <GigDetails gig={selectedGig}/>
-                    <div className="flex flex-col border border-stroke py-3 rounded-xl">
+                    <div className="flex flex-col w-full border border-stroke py-3 rounded-xl">
                         <AboutCreator gig={selectedGig}/>
                         <GigHistory/>
                         <Feed/>

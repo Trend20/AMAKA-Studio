@@ -15,15 +15,6 @@ const Header = (props: {
     return (
         <header className="sticky top-0 z-999 flex w-full bg-white dark:bg-boxdark dark:drop-shadow-none">
             <div className="flex flex-grow items-center justify-between px-4 py-4 md:px-6 2xl:px-11">
-                <div className="flex items-center space-x-3 w-full">
-                    <Link
-                        href="/"
-                        className="flex items-center justify-center"
-                    >
-                        <Image src="/logo.png" alt={'logo'} width={100} height={100}/>
-                    </Link>
-                    <HowAmakaWorks/>
-                </div>
                 <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
                     {/* <!-- Hamburger Toggle BTN --> */}
                     <button
@@ -40,18 +31,27 @@ const Header = (props: {
 
                     <Link className="block flex-shrink-0 lg:hidden" href="/">
                         <Image
-                            width={32}
-                            height={32}
+                            width={50}
+                            height={50}
                             src={"/logo.png"}
                             alt="Logo"
                         />
                     </Link>
                 </div>
+                <div className="lg:flex hidden items-center space-x-3 w-full">
+                    <Link
+                        href="/"
+                        className="flex items-center justify-center"
+                    >
+                        <Image src="/logo.png" alt={'logo'} width={100} height={100}/>
+                    </Link>
+                    <HowAmakaWorks/>
+                </div>
 
                 <div className="flex items-center space-x-5 w-full justify-end">
                     <div className="hidden sm:block">
                         <form className="bg-bodydark1 space-x-5 w-52 flex items-center rounded-full p-3 px-4">
-                            <Image width={100} height={100} src={"/icons/search.svg"} alt="search icon" />
+                            <Image width={100} height={100} src={"/icons/search.svg"} alt="search icon"/>
                             <input
                                 type="text"
                                 placeholder="Search AMAKA"
@@ -60,7 +60,7 @@ const Header = (props: {
                         </form>
                     </div>
                     <div className="flex items-center space-x-3">
-                        <CreateGig />
+                        <CreateGig/>
                         <DarkModeSwitcher/>
                         <DropdownUser/>
                     </div>
