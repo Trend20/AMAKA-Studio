@@ -25,7 +25,7 @@ export default function RootLayout({
           {loading ? (
               <Loader/>
           ) : (
-              <div className="flex h-screen overflow-hidden">
+              <div className="flex h-screen overflow-hidden w-full">
                   {/* <!-- ===== Sidebar Start ===== --> */}
                       <Sidebar
                           sidebarOpen={sidebarOpen}
@@ -43,7 +43,7 @@ export default function RootLayout({
                       {/* <!-- ===== Header End ===== --> */}
 
                       {/* <!-- ===== Main Content Start ===== --> */}
-                      <main>
+                      <main className="ml-70">
                           <div className="mx-auto max-w-screen-2xl">
                               {children}
                           </div>
