@@ -6,6 +6,7 @@ import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import HowAmakaWorks from "@/components/HowAmakaWorks";
 import React from "react";
+import CreateGig from "@/app/gigs/components/CreateGig";
 
 const Header = (props: {
     sidebarOpen: string | boolean | undefined;
@@ -82,6 +83,7 @@ const Header = (props: {
                         </form>
                     </div>
                     <div className="flex items-center space-x-3">
+                        <CreateGig />
                         <DarkModeSwitcher/>
                         <DropdownUser/>
                     </div>
