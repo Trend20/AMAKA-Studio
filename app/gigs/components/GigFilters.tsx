@@ -1,7 +1,6 @@
 const GigFilters = () =>{
     return(
-        <div className="flex py-5 border-b w-full items-center justify-between border-stroke">
-            <div className="flex items-center w-3/4 px-4 space-x-8">
+        <div className="flex py-5 border-b w-full items-center border-stroke space-x-8 px-4">
                 <select name="amout" id="amount" className="flex rounded-full outline-0 py-2 px-4 border border-stroke w-40">
                     <option value="default">Earned amount</option>
                     <option value="100">$0 - $200</option>
@@ -32,7 +31,8 @@ const GigFilters = () =>{
                     <option value="100">$50 - $300</option>
                     <option value="100">$100 - $500</option>
                 </select>
-            </div>
+            <hr className="border border-stroke h-7"/>
+            <button className="flex rounded-full outline-0 px-4 py-2 border border-stroke">All filters</button>
         </div>
     )
 }
