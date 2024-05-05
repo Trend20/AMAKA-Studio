@@ -12,6 +12,8 @@ import GigFilters from "@/app/gigs/components/GigFilters";
 const GigsPage = () => {
     const defaultGig= gigsData[0];
     const [selectedGig, setSelectedGig] = useState(defaultGig);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredJobs, setFilteredJobs] = useState([]);
 
     const handleSelectGig = (job: any) => {
         setSelectedGig(job);
@@ -22,7 +24,7 @@ const GigsPage = () => {
         <div className="flex flex-col w-full">
             <GigFilters />
             <div className="flex w-full px-4">
-                <div className="flex flex-col w-1/2 border-r border-stroke py-2">
+                <div className="flex flex-col w-1/2 border-r border-stroke py-2 rounded-b-xl">
                     {
                         gigsData.map((item) => (
                             <SingleGig gig={item} key={item.id} selectedItem={selectedGig} handleClick={() => handleSelectGig(item)}/>

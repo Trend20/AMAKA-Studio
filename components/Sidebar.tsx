@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -100,7 +101,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                     <li  key={item.id}>
                                         <Link
                                             href={`/${item.name}`}
-                                            className={`group relative capitalize space-x-5 flex items-center gap-2.5 rounded-lg py-2 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
+                                            className={`group relative capitalize space-x-5 flex items-center gap-2.5 rounded-lg py-1.5 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
                                                 pathname.includes(`${item.name}`) && "bg-[#b8c0ff] dark:bg-meta-4"
                                             }`}
                                         >

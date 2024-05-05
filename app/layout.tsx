@@ -2,7 +2,6 @@
 
 import "../styles/globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import {useEffect, useState} from "react";
 import Sidebar from "@/components/Sidebar";
 import Loader from "@/components/shared/Loader";
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
       <html lang="en">
       <body suppressHydrationWarning={true}>
-      <div className="dark:bg-boxdark-2 dark:text-bodydark">
+      <div className="dark:bg-boxdark-2 dark:text-bodydark overflow-hidden">
           {loading ? (
               <Loader/>
           ) : (
