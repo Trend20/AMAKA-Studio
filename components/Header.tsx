@@ -20,7 +20,7 @@ const Header = (props: {
                         href="/"
                         className="flex items-center justify-center"
                     >
-                        <Image src="/logo.png" alt={'logo'} width={70} height={70}/>
+                        <Image src="/logo.png" alt={'logo'} width={100} height={100}/>
                     </Link>
                     <HowAmakaWorks/>
                 </div>
