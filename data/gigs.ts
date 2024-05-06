@@ -1,4 +1,6 @@
-export const gigsData = [
+import {Gig} from "@/types/gig";
+
+export const gigsData:Gig[] = [
     {
         id:1,
         profilePic:'/images/alicia.png',

@@ -11,9 +11,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useSearchQuery from "@/hooks/useSearchQuery";
 
-interface DataType{
-    data:any
-}
 
 
 const GigsPage = () => {
