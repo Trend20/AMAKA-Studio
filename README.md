@@ -12,7 +12,7 @@ Feedback: There is no consistency in the design of AMAKA platform.
 Suggestion: AMAKA platform should embrace consistency in terms of ensuring that various design elements like the fonts and the general typography stays consistent 
 throughout the platform. This can help improve the user experience. 
 <p>
-  <img src="/public/logo.svg" alt="openget-logo" width="128px" height="128px"/>
+  <img src="/public/images/homepage.png" alt="openget-logo" width="420px" height="200px"/>
 </p>
 
 ### Visual hierarchy
@@ -35,7 +35,7 @@ on how to access what they want. We can increase the with ong the tabs to make t
 
 ### Homepage
 <p>
-  <img src="/public/images/homepage.png" alt="openget-logo" width="320px" height="200px"/>
+  <img src="/public/images/homepage.png" alt="homepage" width="420px" height="200px"/>
 </p>
 Feedback: The homepage layout feels cluttered with too much information.
 
@@ -43,7 +43,7 @@ Suggestions: Simplify the design by reducing the number of elements on the homep
 
 ### Profile Page
 <p>
-  <img src="/public/images/profile.png" alt="openget-logo" width="320px" height="200px"/>
+  <img src="/public/images/profile.png" alt="openget-logo" width="420px" height="200px"/>
 </p>
 Feedback: Profile page design lacks personalization.
 
