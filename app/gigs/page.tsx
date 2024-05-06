@@ -50,10 +50,10 @@ const GigsPage = () => {
         setGigs(updatedJobs);
     };
 
-    useEffect(() => {
-        // Dump data to local storage when the component mounts
-        localStorage.setItem('gigs', JSON.stringify(gigsData));
-    }, []);
+    // useEffect(() => {
+    //     // Dump data to local storage when the component mounts
+    //     localStorage.setItem('gigs', JSON.stringify(gigsData));
+    // }, []);
 
     return(
         <div className="flex flex-col w-full">

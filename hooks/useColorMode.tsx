@@ -1,9 +1,11 @@
 "use client";
 import { useEffect } from "react";
 import useLocalStorage from "./useLocalStorage";
+import {gigsData} from "@/data/gigs";
 
 const useColorMode = () => {
     const [colorMode, setColorMode] = useLocalStorage("color-theme", "light");
+    const [gigs, setGigs] = useLocalStorage("gigs", JSON.stringify(gigsData));
 
     useEffect(() => {
         const className = "dark";
