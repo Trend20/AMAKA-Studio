@@ -5,7 +5,7 @@ import React from "react";
 const FeedTwo = () => {
     return (
         <div className="flex flex-col py-5 border-t border-stroke">
-            <Link href={'/'} className="font-semibold text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing
+            <Link href={'/'} className="font-semibold text-2xl w-3/4">Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit.</Link>
             <div className="flex flex-col items-start w-full mt-5">
                 <Image src="/images/feed2.png" alt="cover" width={1000} height={500}/>

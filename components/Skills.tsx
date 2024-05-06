@@ -10,7 +10,7 @@ const Skills = () => {
                 {
                     skills.map((skill:Skill) => (
                         <Link key={skill.id} href={`/skills/${skill.name}`}
-                              className="flex text-[10px] items-center justify-center font-semibold uppercase bg-stroke rounded-full w-auto px-2 py-3">
+                              className="flex text-[10px] items-center justify-center font-semibold uppercase bg-stroke dark:border dark border-bodydark dark:bg-transparent rounded-full w-auto px-2 py-3">
                             {skill.name}
                         </Link>
                     ))

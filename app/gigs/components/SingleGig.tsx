@@ -7,7 +7,7 @@ import { GrClose } from "react-icons/gr"
 const SingleGig = ({gig, handleClick, selectedItem, deleteGig}:any) =>{
     console.log(selectedItem);
     return(
-        <div className={`flex flex-col px-3 relative cursor-pointer  ${selectedItem === gig ? 'bg-[#f8f9fa]' : 'bg-transparent'}`} onClick={handleClick}>
+        <div className={`flex flex-col px-3 relative cursor-pointer  ${selectedItem === gig ? 'bg-[#f8f9fa] dark:bg-boxdark' : 'bg-transparent'}`} onClick={handleClick}>
             <div className="flex items-start space-x-5 py-2">
                 <Image src={gig.profilePic} alt={gig.name} width={170} height={170} className="rounded-full"/>
                 <div className="flex flex-col">

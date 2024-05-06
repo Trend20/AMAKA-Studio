@@ -27,7 +27,7 @@ const Header = (props: {
                     {/* <!-- Hamburger Toggle BTN --> */}
                     <button
                         aria-controls="sidebar"
-                        onClick={(e) => {
+                        onClick={(e :any) => {
                             e.stopPropagation();
                             props.setSidebarOpen(!props.sidebarOpen);
                         }}
@@ -58,8 +58,10 @@ const Header = (props: {
 
                 <div className="flex items-center space-x-5 w-full justify-end">
                     <div className="hidden sm:block">
-                        <form className="bg-bodydark1 space-x-5 w-52 flex items-center rounded-full p-3 px-4">
-                            <Image width={100} height={100} src={"/icons/search.svg"} alt="search icon"/>
+                        <form className="bg-bodydark1 w-52 flex items-center rounded-full p-3 px-4">
+                            <button type="submit" className="flex items-center justify-center mr-1">
+                                <Image width={100} height={100} src={"/icons/search.svg"} alt="search icon"/>
+                            </button>
                             <input
                                 type="text"
                                 placeholder="Search AMAKA"

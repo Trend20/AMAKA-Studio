@@ -6,22 +6,22 @@ const FeedOne = () => {
     return (
         <div className="flex py-5 justify-between w-full">
             <div className="flex flex-col w-3/4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className="font-semibold text-2xl w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p className="text-sm leading-5 mt-5 lg:w-1/2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt velit sit amet.
                     Integer commodo est.... <b>Read More</b>
                 </p>
                 <div className="flex space-x-5 w-full mt-5">
                     <Link href={'/'}
-                          className="flex text-xs items-center justify-center font-normal uppercase bg-bodydark rounded-full w-auto px-2 py-3">
+                          className="flex text-xs items-center justify-center font-normal uppercase bg-bodydark dark:bg-transparent dark:border dark:border-bodydark rounded-full w-32 px-2 py-3">
                         Design
                     </Link>
                     <Link href={'/'}
-                          className="flex text-xs items-center justify-center font-normal uppercase bg-bodydark rounded-full w-auto px-2 py-3">
+                          className="flex text-xs items-center justify-center font-normal uppercase bg-bodydark dark:bg-transparent dark:border dark:border-bodydark rounded-full w-32 px-2 py-3">
                         Lagos
                     </Link>
                     <Link href={'/'}
-                          className="flex text-xs items-center justify-center font-normal uppercase bg-bodydark rounded-full w-auto px-2 py-3">
+                          className="flex text-xs items-center justify-center font-normal uppercase bg-bodydark dark:bg-transparent dark:border dark:border-bodydark rounded-full w-32 px-2 py-3">
                         Architecture
                     </Link>
                 </div>
