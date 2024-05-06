@@ -1,6 +1,41 @@
-## AMAKA Studio
+# AMAKA Studio Gig Page Design
+A simple NextJS implementation of AMAKA Studio gig page.
 
-Live: https://amaka-studio.vercel.app
+### Live: 
+https://amaka-studio.vercel.app
+
+## Implementation
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone git@github.com:Trend20/AMAKA-Studio.git
+```
+
+Go to the project directory
+
+```bash
+  cd AMAKA-Studio
+```
+
+Install dependencies
+
+```bash
+  yarn
+```
+
+Start the server
+
+```bash
+  yarn dev
+```
+
+## Tech Stack
+
+**Client:** NextJS, Typescript, TailwindCSS
 
 
 
