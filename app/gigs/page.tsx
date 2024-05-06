@@ -16,7 +16,7 @@ import {gigsData} from "@/data/gigs";
 
 const GigsPage = () => {
     const gigData = JSON.parse(localStorage.getItem("gigs") || "{}");
-    const [searchQuery] = useSearchQuery();
+    // const [searchQuery] = useSearchQuery();
     const [gigs, setGigs] = useState<any[]>(gigData);
     const [selectedGig, setSelectedGig] = useState<any>(gigs[0]);
     const [filteredData, setFilteredData] = useState<any>([]);
@@ -58,14 +58,14 @@ const GigsPage = () => {
         localStorage.setItem('gigs', JSON.stringify(gigsData));
     }, []);
 
-    useEffect(() => {
-        const filteredGigs = gigs.filter(item =>
-            item.name.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-        setFilteredData(filteredGigs);
-    }, [searchQuery, gigs]);
-
-    console.log(filteredData);
+    // useEffect(() => {
+    //     const filteredGigs = gigs.filter(item =>
+    //         item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    //     );
+    //     setFilteredData(filteredGigs);
+    // }, [searchQuery, gigs]);
+    //
+    // console.log(filteredData);
 
 
     return(
@@ -75,7 +75,7 @@ const GigsPage = () => {
             <div className="flex w-full px-3 flex-col lg:flex-row">
                 <div className="flex flex-col lg:w-1/2 w-full lg:border-r border-stroke py-2 rounded-b-xl">
                     {
-                        filteredData.map((item:any) => (
+                        gigs.map((item:any) => (
                             <SingleGig gig={item} key={item.id} deleteGig={handleDeleteGig} selectedItem={selectedGig} handleClick={() => handleSelectGig(item)}/>
                         ))
                     }

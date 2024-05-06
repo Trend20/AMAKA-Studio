@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [loading, setLoading] = useState<boolean>(true);
-    const [searchQuery, setSearchQuery] = useSearchQuery();
+    // const [searchQuery, setSearchQuery] = useSearchQuery();
 
     useEffect(() => {
         setTimeout(() => setLoading(false), 1000);
@@ -42,7 +42,7 @@ export default function RootLayout({
                           <Header
                               sidebarOpen={sidebarOpen}
                               setSidebarOpen={setSidebarOpen}
-                              handleChange={setSearchQuery}
+                              // handleChange={setSearchQuery}
                           />
                       {/* <!-- ===== end header ===== --> */}
 
