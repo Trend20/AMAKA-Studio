@@ -1,6 +1,5 @@
 "use client"
-import { useState} from "react";
-import {gigsData} from "@/data/gigs";
+import {useEffect, useState} from "react";
 import SingleGig from "@/app/gigs/components/SingleGig";
 import GigDetails from "@/app/gigs/components/GigDetails";
 import Skills from "@/components/Skills";
@@ -10,22 +9,28 @@ import Feed from "@/app/gigs/components/Feed";
 import GigFilters from "@/app/gigs/components/GigFilters";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useSearchQuery from "@/hooks/useSearchQuery";
+
+const gigData = JSON.parse(localStorage.getItem("gigs"));
+
+
 
 const GigsPage = () => {
-    const defaultGig= gigsData[0];
-    const [selectedGig, setSelectedGig] = useState(gigsData[0]);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [filteredJobs, setFilteredJobs] = useState([]);
-    const [gigs, setGigs] = useState(gigsData);
+    const [searchQuery] = useSearchQuery();
+    const [gigs, setGigs] = useState<any[]>(gigData);
+    const [selectedGig, setSelectedGig] = useState<any>(gigs[0]);
+    const [filteredData, setFilteredData] = useState<any>([]);
+
+    console.log(gigData)
 
     // select gig
-    const handleSelectGig = (job: any) => {
-        setSelectedGig(job);
+    const handleSelectGig = (gig: any) => {
+        setSelectedGig(gig);
     };
 
     // delete gig
     const handleDeleteGig = (id:any) => {
-        const updatedGigs = gigs.filter((gig) => gig.id !== id);
+        const updatedGigs = gigs?.filter((gig:any) => gig.id !== id);
         if (selectedGig.id === id) {
             setSelectedGig(updatedGigs[0]);
         }
@@ -37,7 +42,26 @@ const GigsPage = () => {
         setGigs(updatedGigs);
     };
 
-    console.log(defaultGig);
+    // bookmark gig
+    const handleBookmarkClick = (gigId:any) => {
+        const updatedJobs = gigs.map(gig => {
+            if (gig.id === gigId) {
+                return { ...gig, bookmarked: !gig.bookmarked };
+            }
+            return gig;
+        });
+        setGigs(updatedJobs);
+    };
+
+    useEffect(() => {
+        const filteredGigs = gigs.filter(item =>
+            item.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        setFilteredData(filteredGigs);
+    }, [searchQuery, gigs]);
+
+    console.log(filteredData);
+
 
     return(
         <div className="flex flex-col w-full">
@@ -46,13 +70,13 @@ const GigsPage = () => {
             <div className="flex w-full px-3 flex-col lg:flex-row">
                 <div className="flex flex-col lg:w-1/2 w-full lg:border-r border-stroke py-2 rounded-b-xl">
                     {
-                        gigs.map((item) => (
+                        filteredData.map((item:any) => (
                             <SingleGig gig={item} key={item.id} deleteGig={handleDeleteGig} selectedItem={selectedGig} handleClick={() => handleSelectGig(item)}/>
                         ))
                     }
                 </div>
                 <div className="lg:flex lg:w-3/4 w-full flex-col">
-                    <GigDetails gig={selectedGig}/>
+                    <GigDetails gig={selectedGig} handleBookmarkClick={handleBookmarkClick}/>
                     <div className="flex flex-col w-full border border-stroke py-3 rounded-xl">
                         <AboutCreator gig={selectedGig}/>
                         <GigHistory/>

@@ -7,11 +7,19 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import HowAmakaWorks from "@/components/HowAmakaWorks";
 import React from "react";
 import CreateGig from "@/app/gigs/components/CreateGig";
+import useSearchQuery from "@/hooks/useSearchQuery";
 
 const Header = (props: {
     sidebarOpen: string | boolean | undefined;
     setSidebarOpen: (arg0: boolean) => void;
+    handleChange: any;
 }) => {
+    const [searchQuery, setSearchQuery] = useSearchQuery();
+
+    const handleChange = (e:any) => {
+        const query = e.target.value;
+        setSearchQuery(query);
+    };
     return (
         <header className="sticky top-0 z-999 flex w-full bg-white dark:bg-boxdark dark:drop-shadow-none">
             <div className="flex flex-grow items-center justify-between px-4 py-4 md:px-6 2xl:px-11">
@@ -55,6 +63,8 @@ const Header = (props: {
                             <input
                                 type="text"
                                 placeholder="Search AMAKA"
+                                value={searchQuery}
+                                onChange={handleChange}
                                 className="font-light bg-transparent focus:outline-none xl:w-125"
                             />
                         </form>

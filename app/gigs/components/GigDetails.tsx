@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import { BsBookmarkFill } from "react-icons/bs";
 
-const GigDetails = ({gig}:any) =>{
+const GigDetails = ({gig, handleBookmarkClick}:any) =>{
     console.log(gig);
     return (
         <div className="flex items-start flex-col py-4 w-full">
@@ -11,7 +12,9 @@ const GigDetails = ({gig}:any) =>{
                     <p className="text-xl leading-10 font-semibold">{gig.name}</p>
                 </div>
                 <div className="flex px-4 space-x-2 cursor-pointer">
-                    <Image src="/icons/bookmark.svg" alt="bookmark" width={30} height={30}/>
+                    <button onClick={() => handleBookmarkClick(gig.id)}>
+                        {gig.bookmarked ? <BsBookmarkFill size={25}/> : <Image src="/icons/bookmark.svg" alt="bookmark" width={30} height={30} />}
+                    </button>
                     <Image src="/icons/more.svg" alt="bookmark" width={30} height={30}/>
                 </div>
             </div>

@@ -35,11 +35,12 @@ Start the server
 
 ## Tech Stack
 
-**Client:** NextJS, Typescript, TailwindCSS
+**Client:** NextJS 14, Typescript, TailwindCSS
 
 
 
-## Exercise Two:  Provide a list of UI and UX feedback on AMAKA platform with screenshots and suggestions.
+# Exercise Two:  
+## UI and UX feedback on AMAKA platform.
 
 ### Consistent design
 Feedback: There is no consistency in the design of AMAKA platform.

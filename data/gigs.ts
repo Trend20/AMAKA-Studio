@@ -8,6 +8,7 @@ export const gigsData = [
         location:'London, United Kingdom',
         hourlyRate:'$36 - $200',
         timestamp:'1 hour',
+        bookmarked:false,
         roles: [
             {
                 id:1,
@@ -43,6 +44,7 @@ export const gigsData = [
         location:'Toronto, Canada',
         hourlyRate:'$78 - $400',
         timestamp:'4 hours',
+        bookmarked:false,
         roles: [
             {
                 id:1,
@@ -77,6 +79,7 @@ export const gigsData = [
         location:'Delaware, United States',
         hourlyRate:'$100 - $500',
         timestamp:'6 hours',
+        bookmarked:false,
         roles: [
             {
                 id:1,
@@ -111,6 +114,7 @@ export const gigsData = [
         location:'Nairobi, Kenya',
         hourlyRate:'$60 - $290',
         timestamp:'2 hours',
+        bookmarked:false,
         roles: [
             {
                 id:1,

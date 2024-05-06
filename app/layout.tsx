@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import {useEffect, useState} from "react";
 import Sidebar from "@/components/Sidebar";
 import Loader from "@/components/shared/Loader";
+import {gigsData} from "@/data/gigs";
+import useSearchQuery from "@/hooks/useSearchQuery";
 
 
 export default function RootLayout({
@@ -14,9 +16,17 @@ export default function RootLayout({
 }>) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [loading, setLoading] = useState<boolean>(true);
+    const [searchQuery, setSearchQuery] = useSearchQuery();
+
     useEffect(() => {
         setTimeout(() => setLoading(false), 1000);
     }, []);
+
+    useEffect(() => {
+        // Dump data to local storage when the component mounts
+        localStorage.setItem('gigs', JSON.stringify(gigsData));
+    }, []);
+
   return (
       <html lang="en">
       <body suppressHydrationWarning={true}>
@@ -37,6 +47,7 @@ export default function RootLayout({
                           <Header
                               sidebarOpen={sidebarOpen}
                               setSidebarOpen={setSidebarOpen}
+                              handleChange={setSearchQuery}
                           />
                       {/* <!-- ===== end header ===== --> */}
 
