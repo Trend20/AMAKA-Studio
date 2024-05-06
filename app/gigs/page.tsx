@@ -10,6 +10,7 @@ import GigFilters from "@/app/gigs/components/GigFilters";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useSearchQuery from "@/hooks/useSearchQuery";
+import {gigsData} from "@/data/gigs";
 
 
 
@@ -51,6 +52,11 @@ const GigsPage = () => {
         });
         setGigs(updatedJobs);
     };
+
+    useEffect(() => {
+        // Dump data to local storage when the component mounts
+        localStorage.setItem('gigs', JSON.stringify(gigsData));
+    }, []);
 
     useEffect(() => {
         const filteredGigs = gigs.filter(item =>

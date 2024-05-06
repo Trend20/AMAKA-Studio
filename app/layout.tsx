@@ -22,11 +22,6 @@ export default function RootLayout({
         setTimeout(() => setLoading(false), 1000);
     }, []);
 
-    useEffect(() => {
-        // Dump data to local storage when the component mounts
-        localStorage.setItem('gigs', JSON.stringify(gigsData));
-    }, []);
-
   return (
       <html lang="en">
       <body suppressHydrationWarning={true}>

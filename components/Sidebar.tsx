@@ -91,14 +91,15 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             {/* <!-- SIDEBAR HEADER --> */}
 
 
-            <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
+            <div
+                className="no-scrollbar flex flex-col overflow-y-auto border-b border-bodydark pb-3 duration-300 ease-linear">
                 {/* <!-- Sidebar Menu --> */}
                 <nav className="px-4 lg:px-6">
                     <div>
-                        <ul className="mb-6 flex flex-col gap-1.5">
+                        <ul className="flex flex-col gap-1.5">
                             {
-                                sidebarData.map((item:SidebarData) => (
-                                    <li  key={item.id}>
+                                sidebarData.map((item: SidebarData) => (
+                                    <li key={item.id}>
                                         <Link
                                             href={`/${item.name}`}
                                             className={`group relative capitalize space-x-5 flex items-center gap-2.5 rounded-lg py-1.5 px-4 font-light duration-300 ease-in-out hover:bg-[#b8c0ff] ${
@@ -114,6 +115,35 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         </ul>
                     </div>
                 </nav>
+                <div className="flex flex-col justify-start">
+                    <hr className="border border-stroke w-full"/>
+                    <div className="flex ml-5 justify-start items-center px-4 lg:px-6">
+                        <Image src="/images/editorial.png" alt="editorial" className="py-4" width={150}
+                               height={150}/>
+                    </div>
+                    <hr className="border border-stroke w-full"/>
+                    <div className="flex flex-col ml-5 justify-start items-start space-y-3 mt-5 px-4 lg:px-6">
+                        <Image src="/images/appstore.png" alt="appstore" width={150} height={150}/>
+                        <Image src="/images/playstore.png" alt="playstore" width={150} height={150}/>
+                    </div>
+                    <div className="flex flex-col mt-8 ml-5 justify-start items-start px-4 lg:px-6">
+                        <span className="flex items-center space-x-2">
+                            <Image src="/icons/facebook.svg" alt="facebook" width={20} height={20}/>
+                            <Image src="/icons/instagram.svg" alt="instagram" width={20} height={20}/>
+                            <Image src="/icons/twitter.svg" alt="twitter" width={20} height={20}/>
+                        </span>
+                    </div>
+                    <div
+                        className="flex flex-wrap gap-2 ml-5 px-4 lg:px-6 justify-start items-center text-bodydark2 font-light mt-5 text-sm">
+                        <Link href={'/'}>About</Link> |
+                        <Link href={'/'}>Copyright</Link> |
+                        <Link href={'/'}>Creators</Link> |
+                        <Link href={'/'}>Advertise</Link> |
+                        <Link href={'/'}>Terms & Privacy</Link> |
+                        <Link href={'/'}>Policy & Safety</Link>
+                    </div>
+                    <p className="ml-5 text-sm px-4 lg:px-6 text-bodydark2 font-light mt-5"> © 2023 Amaka LTD</p>
+                </div>
                 {/* <!-- Sidebar Menu --> */}
             </div>
         </aside>
