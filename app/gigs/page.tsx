@@ -9,17 +9,14 @@ import Feed from "@/app/gigs/components/Feed";
 import GigFilters from "@/app/gigs/components/GigFilters";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import useSearchQuery from "@/hooks/useSearchQuery";
 import {gigsData} from "@/data/gigs";
 
 
 
 const GigsPage = () => {
     const gigData = JSON.parse(localStorage.getItem("gigs") || "{}");
-    // const [searchQuery] = useSearchQuery();
     const [gigs, setGigs] = useState<any[]>(gigData);
     const [selectedGig, setSelectedGig] = useState<any>(gigs[0]);
-    const [filteredData, setFilteredData] = useState<any>([]);
 
     console.log(gigData)
 
@@ -57,16 +54,6 @@ const GigsPage = () => {
         // Dump data to local storage when the component mounts
         localStorage.setItem('gigs', JSON.stringify(gigsData));
     }, []);
-
-    // useEffect(() => {
-    //     const filteredGigs = gigs.filter(item =>
-    //         item.name.toLowerCase().includes(searchQuery.toLowerCase())
-    //     );
-    //     setFilteredData(filteredGigs);
-    // }, [searchQuery, gigs]);
-    //
-    // console.log(filteredData);
-
 
     return(
         <div className="flex flex-col w-full">
