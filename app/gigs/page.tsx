@@ -11,11 +11,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useSearchQuery from "@/hooks/useSearchQuery";
 
-const gigData = JSON.parse(localStorage.getItem("gigs"));
-
+interface DataType{
+    data:any
+}
 
 
 const GigsPage = () => {
+    const gigData = JSON.parse(localStorage.getItem("gigs") || "{}");
     const [searchQuery] = useSearchQuery();
     const [gigs, setGigs] = useState<any[]>(gigData);
     const [selectedGig, setSelectedGig] = useState<any>(gigs[0]);
