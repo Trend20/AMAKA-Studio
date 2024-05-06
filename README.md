@@ -30,19 +30,20 @@ https://amaka-studio.vercel.app
 14. **`/gigs/component/CreateGig`**: Hold the create button on the header.
 15. **`/gigs/component/Feed`**: Hold the static feeds elements.
 16. **`/gigs/component/GigFilters`**: Hold the filters UI on the gigs page.
+17. **`/gigs/component/AboutCreator`**: Hold the creator info UI on the gigs page.
 
 
 ### Pages
 1. **`page.tsx`**: Default Home page for the application.
 2. **`profile/page.tsx`**: Profile page.
 3. **`events/page.tsx`**: Events page.
-4. **`settings/page.ts`x**: Settings page.
-5. **`messages/page.ts`x**: Messages page.
+4. **`settings/page.tsx`**: Settings page.
+5. **`messages/page.tsx`**: Messages page.
 6. **`home/page.tsx`**: Home page.
 7. **`notifications/page.tsx`**: Notifications page.
 8. **`challenges/page.tsx`**: Challenges page.
 9. **`bookmarked/page.tsx`**: Bookmarked page for all the bookmarks.
-10. **`gigs/page.tsx`**: Gigs page.
+10. **`gigs/page.tsx`**: Gigs page that passes down the gig data to `SingleGig`, `GigDetail` and `AboutCreator` components.
 11. **`gigs/error.tsx`**: default Error page.
 12. **`gigs/loading.tsx`**: loading page.
 
@@ -51,7 +52,7 @@ https://amaka-studio.vercel.app
 - **`feed.ts`**: Array storing gigs feeds.
 - **`gigHistory.ts`**: Array storing gig history data.
 - **`sidebar.ts`**: Array storing sidebar data.
-- **`skills.t`s**: Array storing skills data.
+- **`skills.ts`**: Array storing skills data.
 
 ### Functionality
 1. **Gigs Page**: Displays a list of gigs on the left and details of the selected gig on the right. Clicking on a gig changes the background to indicate selection.
