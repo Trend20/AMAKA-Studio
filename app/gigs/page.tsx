@@ -1,5 +1,5 @@
 "use client"
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import SingleGig from "@/app/gigs/components/SingleGig";
 import GigDetails from "@/app/gigs/components/GigDetails";
 import Skills from "@/components/Skills";
@@ -14,11 +14,8 @@ import {gigsData} from "@/data/gigs";
 
 
 const GigsPage = () => {
-    const gigData = JSON.parse(localStorage.getItem("gigs") || "{}");
-    const [gigs, setGigs] = useState<any[]>(gigData);
+    const [gigs, setGigs] = useState<any[]>(gigsData);
     const [selectedGig, setSelectedGig] = useState<any>(gigs[0]);
-
-    console.log(gigData)
 
     // select gig
     const handleSelectGig = (gig: any) => {
@@ -49,11 +46,6 @@ const GigsPage = () => {
         });
         setGigs(updatedJobs);
     };
-
-    // useEffect(() => {
-    //     // Dump data to local storage when the component mounts
-    //     localStorage.setItem('gigs', JSON.stringify(gigsData));
-    // }, []);
 
     return(
         <div className="flex flex-col w-full">
