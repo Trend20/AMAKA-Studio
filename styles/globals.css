@@ -7,10 +7,16 @@
 
 @layer base {
     body {
-        @apply font-satoshi font-normal text-base text-black-2 bg-white relative z-1;
+        @apply font-satoshi font-normal text-base text-black-2 dark:text-bodydark2 bg-white relative z-1;
     }
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.drop-select{
+    display: flex;
+    outline: none;
+    background: transparent !important;
 }
