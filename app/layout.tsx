@@ -28,7 +28,7 @@ export default function RootLayout({
               {loading ? (
                   <Loader/>
               ) : (
-                  <div className="flex overflow-hidden w-full">
+                  <div className="flex h-screen overflow-hidden w-full">
                       {/* <!-- ===== sidebar ===== --> */}
                       <Sidebar
                           sidebarOpen={sidebarOpen}
