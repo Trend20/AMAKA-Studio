@@ -92,7 +92,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
 
             <div
-                className="no-scrollbar flex flex-col overflow-y-auto pb-3 duration-300 ease-linear">
+                className="no-scrollbar flex flex-col overflow-y-autopb-3 duration-300 ease-linear">
                 {/* <!-- Sidebar Menu --> */}
                 <nav className="px-4 lg:px-6">
                     <div>
@@ -128,9 +128,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     </div>
                     <div className="flex flex-col mt-8 ml-5 justify-start items-start px-4 lg:px-6">
                         <span className="flex items-center space-x-2">
-                            <Image src="/icons/facebook.svg" alt="facebook" width={20} height={20}/>
-                            <Image src="/icons/instagram.svg" alt="instagram" width={20} height={20}/>
-                            <Image src="/icons/twitter.svg" alt="twitter" width={20} height={20}/>
+                            <Image src="/icons/facebook.svg" alt="facebook" width={25} height={25}/>
+                            <Image src="/icons/instagram.svg" alt="instagram" width={25} height={25}/>
+                            <Image src="/icons/twitter.svg" alt="twitter" width={25} height={25}/>
                         </span>
                     </div>
                     <div

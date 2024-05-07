@@ -7,11 +7,17 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import HowAmakaWorks from "@/components/HowAmakaWorks";
 import React from "react";
 import CreateGig from "@/app/gigs/components/CreateGig";
+import {useSearchContext} from "@/context/SearchContext";
 
 const Header = (props: {
     sidebarOpen: string | boolean | undefined;
     setSidebarOpen: (arg0: boolean) => void;
 }) => {
+    const { searchTerm, setSearchTerm } = useSearchContext();
+
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(e.target.value);
+    };
 
     return (
         <header className="sticky top-0 z-999 flex w-full bg-white dark:bg-boxdark dark:drop-shadow-none">
@@ -59,6 +65,8 @@ const Header = (props: {
                                 type="text"
                                 placeholder="Search AMAKA"
                                 className="font-light bg-transparent focus:outline-none xl:w-125"
+                                value={searchTerm}
+                                onChange={handleSearch}
                             />
                         </form>
                     </div>

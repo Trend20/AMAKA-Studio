@@ -10,12 +10,20 @@ import GigFilters from "@/app/gigs/components/GigFilters";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {gigsData} from "@/data/gigs";
+import {useSearchContext} from "@/context/SearchContext";
 
 
 
 const GigsPage = () => {
     const [gigs, setGigs] = useState<any[]>(gigsData);
     const [selectedGig, setSelectedGig] = useState<any>(gigs[0]);
+    const { searchTerm } = useSearchContext();
+
+    const filteredGigs = gigs.filter(
+        (gig) =>
+            gig.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            gig.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     // select gig
     const handleSelectGig = (gig: any) => {
@@ -54,7 +62,7 @@ const GigsPage = () => {
             <div className="flex w-full px-3 flex-col lg:flex-row">
                 <div className="flex flex-col lg:w-1/2 w-full lg:border-r border-stroke py-2 rounded-b-xl">
                     {
-                        gigs.map((item:any) => (
+                        filteredGigs.map((item:any) => (
                             <SingleGig gig={item} key={item.id} deleteGig={handleDeleteGig} selectedItem={selectedGig} handleClick={() => handleSelectGig(item)}/>
                         ))
                     }
