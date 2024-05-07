@@ -17,7 +17,7 @@ const customStyles:StylesConfig = {
     }),
     placeholder: (provided, state) => ({
         ...provided,
-        color: '#111',
+        color: '#8A99AF',
     }),
 };
 const  GigSelect = ({options, selectedOption, setSelectedOption}:GigSelectProps) =>{
